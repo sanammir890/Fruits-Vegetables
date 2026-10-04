@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshBasket - Organic Veggies &amp; Fruits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Topbar -->
+  <div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fa fa-map-marker-alt"></i>  Thiruvanmiyur , Chennai-41</span>
+        <span><i class="fa fa-envelope"></i> Order@FreshBasket.com</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#">Privacy Policy</a>
+        <span>/</span>
+        <a href="#">Terms of Use</a>
+        <span>/</span>
+        <a href="#">Sales and Refunds</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <i class="fa fa-apple-alt"></i>
+        <span>FreshBasket</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <button type="button" class="nav-icon-btn" id="searchToggleBtn" aria-label="Open search">
+          <i class="fa fa-search"></i>
+        </button>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- 4. Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">100% Organic Fruits</p>
+          <h1>Organic <span class="text-green">Vegetables</span> &amp; Fruits</span> </h1>
+          <p class="hero-desc">Freshly Produced organic Veggies. Stay with FreshBasket</p>
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        </div>
+        <div class="hero-slider">
+          <div class="slider-wrap">
+            <div class="slide active">
+              <img src="Slider images\GettyImages-635946862-Crop.jpg" alt="Fresh fruits">
+            </div>
+            <div class="slide">
+              <img src="Slider images\woman-ordering-fruit-vegetables-using-smart-phone-app_1235831-109182.jpg" alt="Fresh vegetables">
+            </div>
+            <div class="slide">
+              <img src="Slider images\OIP.webp" alt="Organic basket">
+            </div>
+          </div>
+          <div class="slider-dots" id="sliderDots">
+            <button type="button" class="dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button type="button" class="dot" data-slide="1" aria-label="Slide 2"></button>
+            <button type="button" class="dot" data-slide="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Features Strip -->
+    <section class="features" id="features">
+      <div class="container features-grid">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa fa-truck"></i></div>
+          <div>
+            <h4>Free Shipping</h4>
+            <p>Free on order over ₹2,500</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa fa-lock"></i></div>
+          <div>
+            <h4>Secure Payment</h4>
+            <p>100% security payment</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa fa-undo"></i></div>
+          <div>
+            <h4>30 Day Return</h4>
+            <p>30 day money guarantee</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa fa-headset"></i></div>
+          <div>
+            <h4>24/7 Support</h4>
+            <p>Support every time fast</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Featured products (links to shop & detail pages) -->
+    <section class="products section-pad" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <p>A preview of our Items.</p>
+        </div>
+        <div class="product-grid product-grid--featured" id="featuredGrid"></div>
+        <div class="section-cta">
+          <a href="shop.html" class="btn btn-primary">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Offer Banners -->
+    <section class="offers section-pad" id="offers">
+      <div class="container offers-grid">
+        <article class="offer-card offer-card--green">
+          <div class="offer-text">
+            <h5>Fresh Apples</h5>
+            <h3>20% OFF</h3>
+            <a href="shop.html" class="btn btn-light btn-sm">Shop Now</a>
+          </div>
+          <img src="https://themewagon.github.io/fruitables/img/fruite-item-6.jpg" alt="Apples offer">
+        </article>
+        <article class="offer-card offer-card--orange">
+          <div class="offer-text">
+            <h5>Tasty Fruits</h5>
+            <h3>Free delivery</h3>
+            <a href="shop.html?cat=fruits" class="btn btn-light btn-sm">Shop Now</a>
+          </div>
+          <img src="https://themewagon.github.io/fruitables/img/fruite-item-5.jpg" alt="Fruits offer">
+        </article>
+        <article class="offer-card offer-card--dark">
+          <div class="offer-text">
+            <h5>Exotic Vegetable</h5>
+            <h3>Discount ₹2,500</h3>
+            <a href="shop.html?cat=vegetables" class="btn btn-light btn-sm">Shop Now</a>
+          </div>
+          <img src="https://themewagon.github.io/fruitables/img/vegetable-item-4.jpg" alt="Vegetables offer">
+        </article>
+      </div>
+    </section>
+
+    
+    <!-- 10. Testimonials -->
+    <section class="testimonials section-pad" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Customer's Feedback!</h2>
+      <p>This is our Rating and Review!!!</p>
+    </div>
+
+    <div class="testimonials-slider-window">
+      <div class="testimonials-slider-track" id="testimonialsTrack">
+        
+        <article class="testimonial-card">
+          <div class="stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p>Quality of the products are fresh! Peak Sambavam!!!</p>
+          <div class="testimonial-author">
+            <img class="avatar-img" src="Review images\Trish.webp" alt="Trisha">
+            <div>
+              <h4>Trisha</h4>
+              <span>Leo Cafe</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+          </div>
+          <p>Worth every penny. Bloody Sweet!!!</p>
+          <div class="testimonial-author">
+            <img class="avatar-img" src="Review images\Vijay.webp" alt="Vijay">
+            <div>
+              <h4>Vijay</h4>
+              <span>Baker</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p>Friendly support staff. Their Chocolate coffee was awesome!</p>
+          <div class="testimonial-author">
+            <img class="avatar-img" src="Review images\Sandy.webp" alt="Sandy">
+            <div>
+              <h4>Sandy</h4>
+              <span>Freelancer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p>Chandra Have a look at this shop!!!.</p>
+          <div class="testimonial-author">
+            <img class="avatar-img" src="Review images\Andrea.jpeg" alt="Chandra">
+            <div>
+              <h4>Chandra</h4>
+              <span>W/o Rajan</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p>The first rule of the F********** is.</p>
+          <div class="testimonial-author">
+            <img class="avatar-img" src="Review images\Tyler.webp" alt="Tyler">
+            <div>
+              <h4>Tyler Durden</h4>
+              <span>Ceo of a startup</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="testimonials-nav-dots" id="testimonialsDots">
+      <button type="button" class="slide-dot active" data-slide="0" aria-label="Review 1"></button>
+      <button type="button" class="slide-dot" data-slide="1" aria-label="Review 2"></button>
+      <button type="button" class="slide-dot" data-slide="2" aria-label="Review 3"></button>
+      <button type="button" class="slide-dot" data-slide="3" aria-label="Review 4"></button>
+      <button type="button" class="slide-dot" data-slide="4" aria-label="Review 5"></button>
+    </div>
+
+  </div>
+</section>
+  <!-- 11. Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-col--brand">
+        <h3 class="footer-logo"><i class="fa fa-apple-alt"></i> FreshBasket</h3>
+        <p>Fresh organic fruits and vegetables delivered with care. Eat clean, live green.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col footer-col--links">
+        <h4>Why People Like us!</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="shop.html">Products</a></li>
+          <li><a href="reviews.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa fa-map-marker-alt"></i>No:4,Jayaram Street,Thiruvanmiyur,Chennai-41</li>
+          <li><i class="fa fa-envelope"></i> Order@FreshBasket.com</li>
+          <li><i class="fa fa-phone"></i> +91-7065572097</li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--map">
+        <h4>Find Us</h4>
+        <div class="footer-map">
+          <iframe
+            title="FreshBasket shop location in Chennai"
+            src="https://maps.google.com/maps?q=Thiruvanmiyur,Chennai&output=embed"
+            width="100%"
+            height="180"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer-col footer-col--newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe for deals and fresh arrivals.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 FreshBasket. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search-dialog-overlay" id="searchDialogOverlay"></div>
+  <div class="search-dialog" id="searchDialog" role="dialog" aria-modal="true" aria-labelledby="searchDialogTitle">
+    <div class="search-dialog-box">
+      <button type="button" class="search-dialog-close" id="searchDialogClose" aria-label="Close search">
+        <i class="fa fa-times"></i>
+      </button>
+      <h3 id="searchDialogTitle">Search Products</h3>
+      <p class="search-dialog-hint">Type a product name or category</p>
+      <div class="search-dialog-field">
+        <input type="text" id="searchDialogInput" placeholder="e.g. apple, tomato..." autocomplete="off">
+        <button type="button" id="searchDialogBtn" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script src="products.js"></script>
+  <script src="common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

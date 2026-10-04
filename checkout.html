@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Fruitables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fa fa-map-marker-alt"></i> No 6 cross street, Shanthi Colony, Chennai</span>
+        <span><i class="fa fa-envelope"></i> Order@Fruitables.com</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <i class="fa fa-apple-alt"></i>
+        <span>Fruitables</span>
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu">
+        <i class="fa fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <!-- <li class="nav-dropdown" id="pagesDropdown">
+          <button type="button" class="nav-dropdown-toggle" id="pagesDropdownBtn" aria-expanded="false">
+            Pages <i class="fa fa-chevron-down"></i>
+          </button>
+          <ul class="nav-dropdown-menu"> -->
+            <!-- <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="404.html">404</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="searchToggleBtn" aria-label="Open search">
+          <i class="fa fa-search"></i>
+        </button>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty.</p></div>
+    <div class="cart-footer">
+      <div class="cart-total-row"><span>Total:</span><strong id="cartTotal">₹0</strong></div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span>Checkout</span>
+        </nav>
+        <h1>Checkout</h1>
+        <p>Fill in your details to complete the order.</p>
+      </div>
+    </section>
+
+    <section class="checkout-page section-pad">
+      <div class="container checkout-layout">
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <h2 class="checkout-form-title">Billing Details</h2>
+
+          <div class="form-group">
+            <label for="fullName">Full Name <span>*</span></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your full name">
+            <span class="form-error" id="err-fullName"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+            <span class="form-error" id="err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone <span>*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number">
+            <span class="form-error" id="err-phone"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address <span>*</span></label>
+            <textarea id="address" name="address" rows="3" placeholder="Street, area, city, pincode"></textarea>
+            <span class="form-error" id="err-address"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City <span>*</span></label>
+            <input type="text" id="city" name="city" placeholder="Chennai">
+            <span class="form-error" id="err-city"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+          <p class="form-success" id="formSuccess" hidden>Order placed successfully! Happy Shopping</p>
+        </form>
+
+        <aside class="checkout-summary">
+          <h3>Order Summary</h3>
+          <div id="checkoutItemsList" class="checkout-items-list">
+            <p class="cart-empty">No items in cart.</p>
+          </div>
+          <div class="checkout-summary-total">
+            <span>Total Amount:</span>
+            <strong id="checkoutTotal">₹0</strong>
+          </div>
+          <a href="shop.html" class="btn btn-outline btn-block">Continue Shopping</a>
+          <button type="button" class="btn btn-cancel btn-block" id="checkoutCancel">Cancel Order</button>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-col--brand">
+        <h3 class="footer-logo"><i class="fa fa-apple-alt"></i> Fruitables</h3>
+        <p>Fresh organic fruits and vegetables delivered with care. Eat clean, live green.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col footer-col--links">
+        <h4>Why People Like us!</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="shop.html">Products</a></li>
+          <li><a href="reviews.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa fa-map-marker-alt"></i> No 6 Cross St, Shanthi Colony, Chennai</li>
+          <li><i class="fa fa-envelope"></i> Order@Fruitables.com</li>
+          <li><i class="fa fa-phone"></i> +91 9565351575</li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--map">
+        <h4>Find Us</h4>
+        <div class="footer-map">
+          <iframe
+            title="Fruitables shop location in Chennai"
+            src="https://maps.google.com/maps?q=Shanthi+Colony+Anna+Nagar+Chennai&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            height="180"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="footer-col footer-col--newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe for deals and fresh arrivals.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Fruitables. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="search-dialog-overlay" id="searchDialogOverlay"></div>
+  <div class="search-dialog" id="searchDialog" role="dialog" aria-modal="true" aria-labelledby="searchDialogTitle">
+    <div class="search-dialog-box">
+      <button type="button" class="search-dialog-close" id="searchDialogClose" aria-label="Close search"><i class="fa fa-times"></i></button>
+      <h3 id="searchDialogTitle">Search Products</h3>
+      <p class="search-dialog-hint">Type a product name or category</p>
+      <div class="search-dialog-field">
+        <input type="text" id="searchDialogInput" placeholder="e.g. apple, tomato..." autocomplete="off">
+        <button type="button" id="searchDialogBtn" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script src="common.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

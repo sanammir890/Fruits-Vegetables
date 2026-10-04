@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Oranges",
+    "category": "fruits",
+    "price": 415,
+    "unit": "kg",
+    "description": "Packed with Vitamin C. Boosts immunity and keeps skin healthy.",
+    "badge": "Fresh",
+    "image": "Product Images/Orange.webp"
+  },
+  {
+    "id": 2,
+    "name": "Amla",
+    "category": "fruits",
+    "price": 539,
+    "unit": "kg",
+    "description": "Loaded with Vitamin C. Makes skin glow and strengthens hair roots.",
+    "badge": "Popular",
+    "image": "Product Images/organic-amla-fruit-962.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "category": "fruits",
+    "price": 249,
+    "unit": "kg",
+    "description": " Full of potassium and Vitamin B6. Gives quick energy and helps muscles.",
+    "badge": "",
+    "image": "Product Images/Banana.webp"
+  },
+  {
+    "id": 4,
+    "name": "Papaya",
+    "category": "fruits",
+    "price": 459,
+    "unit": "kg",
+    "description": "Contains Vitamin C and A. Great for skin and easy digestion.",
+    "badge": "Sale",
+    "image": "Product Images/Papaya.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Grapes",
+    "category": "fruits",
+    "price": 415,
+    "unit": "kg",
+    "description": " Rich in Vitamin C and K. Good for your heart and energy levels.",
+    "badge": "Fresh",
+    "image": "Product Images/Grapes.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Apple",
+    "category": "fruits",
+    "price": 329,
+    "unit": "kg",
+    "description": " Has Vitamin C and fiber. Keeps digestion smooth and heart strong.",
+    "badge": "Popular",
+    "image": "Product Images/Apples.webp"
+  },
+  {
+    "id": 7,
+    "name": "Tomatos",
+    "category": "vegetables",
+    "price": 165,
+    "unit": "bunch",
+    "description": "Rich in lycopene. Keeps skin clear and heart strong.",
+    "badge": "Fresh",
+    "image": "Product Images/Tomatos.webp"
+  },
+  {
+    "id": 8,
+    "name": "Cauli-Flower",
+    "category": "vegetables",
+    "price": 290,
+    "unit": "kg",
+    "description": "Packed with Vitamin C and K. Strengthens bones and aids digestion.",
+    "badge": "",
+    "image": "Product Images/cauliflower.webp"
+  },
+  {
+    "id": 9,
+    "name": "Capsicum",
+    "category": "vegetables",
+    "price": 359,
+    "unit": "kg",
+    "description": "High in Vitamin C and A. Boosts immunity and improves eyesight.",
+    "badge": "Sale",
+    "image": "Product Images/Capsicum.webp"
+  },
+  {
+    "id": 10,
+    "name": "Potatoes",
+    "category": "vegetables",
+    "price": 209,
+    "unit": "kg",
+    "description": "Has Vitamin C and potassium. Provides energy and supports nerves.",
+    "badge": "",
+    "image": "Product Images/Potato.webp"
+  },
+  {
+    "id": 11,
+    "name": "Onion",
+    "category": "vegetables",
+    "price": 259,
+    "unit": "kg",
+    "description": " Contains Vitamin C and B vitamins. Fights germs and supports heart health.",
+    "badge": "Popular",
+    "image": "Product Images/onion.webp"
+  },
+  {
+    "id": 12,
+    "name": "Mushroom",
+    "category": "vegetables",
+    "price": 499,
+    "unit": "kg",
+    "description": " Source of Vitamin D and B vitamins. Builds strong bones and immunity.",
+    "badge": "Fresh",
+    "image": "Product Images/Mushroom.webp"
+  }
+]

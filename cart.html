@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Fruitables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fa fa-map-marker-alt"></i> No 6 cross street, Shanthi Colony,Chennai</span>
+        <span><i class="fa fa-envelope"></i> Shopping@Fruitables.com</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <i class="fa fa-apple-alt"></i>
+        <span></span>
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu">
+        <i class="fa fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product.html?id=1">Product Details</a></li>
+        <li class="nav-dropdown" id="pagesDropdown">
+          <!-- <button type="button" class="nav-dropdown-toggle" id="pagesDropdownBtn" aria-expanded="false">
+            Pages <i class="fa fa-chevron-down"></i>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="404.html">404</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </li> -->
+        <li><a href="index.html#footer">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="searchToggleBtn" aria-label="Open search">
+          <i class="fa fa-search"></i>
+        </button>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Quick Cart</h3>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty.</p></div>
+    <div class="cart-footer">
+      <div class="cart-total-row"><span>Total:</span><strong id="cartTotal">₹0</strong></div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span>Cart</span>
+        </nav>
+        <h1>Shopping Cart</h1>
+        <p>.</p>
+      </div>
+    </section>
+
+    <section class="cart-page section-pad">
+      <div class="container">
+        <div id="cartPageContent" class="cart-page-content">
+          <p class="loading-msg">Loading cart...</p>
+        </div>
+        <div class="cart-page-summary" id="cartPageSummary" style="display:none;">
+          <div class="cart-page-total">
+            <span>Order Total:</span>
+            <strong id="cartPageTotal">₹0</strong>
+          </div>
+          <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+          <button type="button" class="btn btn-primary">Proceed to Checkout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-bottom-only">
+      <p>&copy; 2026 Fruitables. <a href="shop.html">Continue Shopping</a></p>
+    </div>
+  </footer>
+
+  <div class="search-dialog-overlay" id="searchDialogOverlay"></div>
+  <div class="search-dialog" id="searchDialog" role="dialog" aria-modal="true" aria-labelledby="searchDialogTitle">
+    <div class="search-dialog-box">
+      <button type="button" class="search-dialog-close" id="searchDialogClose" aria-label="Close search">
+        <i class="fa fa-times"></i>
+      </button>
+      <h3 id="searchDialogTitle">Search Products</h3>
+      <p class="search-dialog-hint">Type a product name or category</p>
+      <div class="search-dialog-field">
+        <input type="text" id="searchDialogInput" placeholder="e.g. apple, broccoli..." autocomplete="off">
+        <button type="button" id="searchDialogBtn" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script src="common.js"></script>
+  <script src="cart-page.js"></script>
+</body>
+</html>
